@@ -1,0 +1,27 @@
+{
+  "name": "react-native-shadow",
+  "version": "1.0.0",
+  "description": "A SVG shadow component powered with react-native-svg,which can provide shadow on Android like iOS ^_^",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RockSAMA",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/879479119/react-native-shadow"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-shadow",
+    "android",
+    "shadow"
+  ],
+  "bugs": {
+  	"url": "https://github.com/879479119/react-native-shadow/issues"
+  },
+  "dependencies": {
+    "react-native-svg": "^4.3.1"
+  }
+}
