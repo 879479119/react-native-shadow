@@ -1,6 +1,8 @@
 # react-native-shadow
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
+---
 
-Since there is no "shadow" attribute in style list of Android,if we want to add a shadow effect on a component,we must patch a PNG-24 picture,but it's so non-graceful;therefore here comes a SVG shadow plugin to help with this problem. **only support RN 0.33 for now**
+Since there is no "shadow" attribute in style list of Android,if we want to add a shadow effect on a component,we must patch a PNG-24 picture,but it's so non-graceful;therefore here comes a SVG shadow plugin to help with this problem. **We suggest you to use native shadow on iOS**
 
 ## HOW TO USE IT
 
@@ -11,7 +13,7 @@ npm install react-native-shadow --save
 ``` 
 
 ### Second
-you have to config your project to support the SVG component we use( `react-native-svg` ):
+you have to config your project to support the SVG component we use( `react-native-svg` - [Link](https://github.com/react-native-community/react-native-svg)):
 Link native code
 
 ```bash
@@ -99,7 +101,9 @@ const shadowOpt = {
 }
 ```
 3.create a shadow element and set the object to `settihg`,and you 
+
 **MUST SET ITS PARENTELEMENT RELATIVE**:
+
 **MUST SET ITS PARENTELEMENT RELATIVE**:
 ```js
 render = () => {
@@ -178,3 +182,8 @@ export default class VideoCell extends Component {
 
 This component is so simple,and we are making efforts to make it better;
 if you met any problem when using it,you can try solving yourself by reading the source code or post an issue,thanks ~~
+
+
+[npm-url]: https://npmjs.org/package/react-native-shadow
+[downloads-image]: http://img.shields.io/npm/dm/react-native-shadow.svg
+[npm-image]: http://img.shields.io/npm/v/react-native-shadow.svg
