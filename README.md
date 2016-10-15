@@ -4,6 +4,11 @@
 
 Since there is no "shadow" attribute in style list of Android,if we want to add a shadow effect on a component,we must patch a PNG-24 picture,but it's so non-graceful;therefore here comes a SVG shadow plugin to help with this problem. **We suggest you to use native shadow on iOS**
 
+![Effect](http://7xsm7w.com1.z0.glb.clouddn.com/20161015151531.png)
+
+There are two BoxShadow Elements in the picture which support `border-radius`,and the Line at the bottom is generated with `BorderShadow` which provide with a top or bottom shadow(can also be inset shadow)
+
+
 ## HOW TO USE IT
 
 ### First
@@ -85,7 +90,7 @@ protected List<ReactPackage> getPackages() {
 
 After config the SVG component,you can simply use it in your project(*show ES6 only*):
 
-1. `import Shadow from 'react-native-shadow'`
+1. `import {BoxShadow} from 'react-native-shadow'`(For BorderShadow,import it as 'BoxShadow')
 2. set an opption object:
 ```js
 const shadowOpt = {
@@ -130,7 +135,7 @@ import {
 	TouchableHighlight
 } from 'react-native'
 
-import Shadow from '../util/shadow'
+import {BoxShadow} from 'react-native-shadow'
 
 export default class VideoCell extends Component {
 	render = () => {
@@ -147,7 +152,7 @@ export default class VideoCell extends Component {
 		}
 
 		return (
-			<Shadow setting={shadowOpt}>
+			<BoxShadow setting={shadowOpt}>
 				<TouchableHighlight style={{
 					position:"relative",
 					width: 160,
@@ -158,16 +163,17 @@ export default class VideoCell extends Component {
 					overflow:"hidden"}}>
 					…………………………
 				</TouchableHighlight>
-			</Shadow>
+			</BoxShadow>
 		)
 	}
 }
 ```
 
-## Information
+## Manual
 
 #### the attribute we supported now:
 
+###BoxShadow
 + **width**: you must set the value the same as your child component
 + **height**: the same as above
 + **color**: the color of shadow,it **doesn't support rgba now**,you may use opacity
@@ -177,6 +183,11 @@ export default class VideoCell extends Component {
 + **x**: the offsetX of shadow
 + **y**: the offsetY of shadow
 + **style**: the style you want to add to the wrapper box
+
+###BorderShadow
++ **width**,**color**,**border**,**opacity**,**style**: these attributes are the same as above
++ **side**: "top" or "bottom",you can choose where the shadow shows
++ **inset**: `true` or `false`,this is similar to CSS - `shadow: color inset`
 
 #### what to notice
 
