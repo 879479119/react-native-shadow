@@ -72,14 +72,14 @@ dependencies {
 #### Edit `./android/app/src/main/java/com/*name*/MainApplication.java`
 add package after the imports:
 ```java
-import com.horcrux.svg.RNSvgPackage;
+import com.horcrux.svg.SvgPackage;
 ```
 AND add a method `getPackages` in class MainApplication:
 ```java
 protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-          new RNSvgPackage()
+          new SvgPackage()
       );
   }
 ```
