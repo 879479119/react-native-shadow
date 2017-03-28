@@ -105,7 +105,7 @@ const shadowOpt = {
 	style:{marginVertical:5}
 }
 ```
-3.create a shadow element and set the object to `settihg`,and you 
+3.create a shadow element and set the object to `setting`,and you 
 
 **MUST SET ITS PARENTELEMENT RELATIVE**:
 
