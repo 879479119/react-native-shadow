@@ -1,6 +1,6 @@
 {
   "name": "react-native-shadow",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A SVG shadow component powered with react-native-svg,which can provide shadow on Android like iOS ^_^",
   "main": "index.js",
   "scripts": {
