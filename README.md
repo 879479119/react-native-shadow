@@ -1,6 +1,9 @@
 # react-native-shadow
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 ---
+### Attention：
+There are many users who are using different verion of `react` and `react-native`, so we have removed the dependency of `react-native-svg` in `package.json` from `1.1.3`, and you must add the correct version of `react-native-svg` as they suggested. :sorry:
+---
 
 Since there is no "shadow" attribute in style list of Android,if we want to add a shadow effect on a component,we must patch a PNG-24 picture,but it's so non-graceful;therefore here comes a SVG shadow plugin to help with this problem. **We suggest you to use native shadow on iOS**
 
@@ -19,70 +22,12 @@ npm install react-native-shadow --save
 
 ### Second
 you have to config your project to support the SVG component we use( `react-native-svg` - [Link](https://github.com/react-native-community/react-native-svg)):
-Link native code
 
 ```bash
-react-native link react-native-svg
-```
-react-native@0.29.0 and 0.29.1 cannot work with Android link properly:[here](https://github.com/facebook/react-native/pull/8612)
-
-Or use rnpm instead
-
-```bash
-rnpm link react-native-svg
-```
-
-**The commands above may add some code to your android and ios dir,if those commands don't make sense,you can try the ways below(for Android): **
-
-#### Edit  `./android/settings.gradle`
-
-If you haven't add any other component,it's like:
-```gradle
-rootProject.name = 'reactNative'
-
-include ':app'
-```
-you can manually add the react-native-svg:
-```gradle
-rootProject.name = 'reactNative'
-
-include ':app', ':react-native-svg'
-project(':react-native-svg').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-svg/android')
-```
-*if you have other components,don't try deleting theme*
-
-#### Edit `./android/app/build.gradle`
-find the dependence part like
-```gradle
-dependencies {
-    compile fileTree(dir: "libs", include: ["*.jar"])
-    compile "com.android.support:appcompat-v7:23.0.1"
-    compile "com.facebook.react:react-native:+"  // From node_modules
-}
+npm install react-native-svg@X.X.X --save
 ``` 
-after add:
-```gradle
-dependencies {
-    compile fileTree(dir: "libs", include: ["*.jar"])
-    compile "com.android.support:appcompat-v7:23.0.1"
-    compile "com.facebook.react:react-native:+"  // From node_modules
-    compile project(':react-native-svg')
-}
-``` 
-#### Edit `./android/app/src/main/java/com/*name*/MainApplication.java`
-add package after the imports:
-```java
-import com.horcrux.svg.SvgPackage;
-```
-AND add a method `getPackages` in class MainApplication:
-```java
-protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-          new SvgPackage()
-      );
-  }
-```
+**You must get the correct version for your project! Or there will be some unknown exception**
+
 
 #### run `react-native run-android` to install the lastest version on your phone
 
