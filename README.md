@@ -53,8 +53,6 @@ const shadowOpt = {
 3.create a shadow element and set the object to `setting`,and you 
 
 **MUST SET ITS PARENTELEMENT RELATIVE**:
-
-**MUST SET ITS PARENTELEMENT RELATIVE**:
 ```js
 render = () => {
 	return (
@@ -118,7 +116,7 @@ export default class VideoCell extends Component {
 
 #### the attribute we supported now:
 
-###BoxShadow
+### BoxShadow
 + **width**: you must set the value the same as your child component
 + **height**: the same as above
 + **color**: the color of shadow,it **doesn't support rgba now**,you may use opacity
@@ -129,7 +127,7 @@ export default class VideoCell extends Component {
 + **y**: the offsetY of shadow
 + **style**: the style you want to add to the wrapper box
 
-###BorderShadow
+### BorderShadow
 + **width**,**color**,**border**,**opacity**,**style**: these attributes are the same as above
 + **side**: "top" or "bottom",you can choose where the shadow shows
 + **inset**: `true` or `false`,this is similar to CSS - `shadow: color inset`
