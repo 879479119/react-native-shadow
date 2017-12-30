@@ -2,7 +2,9 @@
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 ---
 ### Attention：
-There are many users who are using different verion of `react` and `react-native`, so we have removed the dependency of `react-native-svg` in `package.json` from `1.1.3`, and you must add the correct version of `react-native-svg` as they suggested. :sorry:
+
+**There are many users who are using different verion of `react` and `react-native`, so we have removed the dependency of `react-native-svg` in `package.json` since `1.1.3`, and you must add the correct version of `react-native-svg` as they suggested. :sorry:**
+
 ---
 
 Since there is no "shadow" attribute in style list of Android,if we want to add a shadow effect on a component,we must patch a PNG-24 picture,but it's so non-graceful;therefore here comes a SVG shadow plugin to help with this problem. **We suggest you to use native shadow on iOS**
@@ -17,21 +19,21 @@ There are two BoxShadow Elements in the picture which support `border-radius`,an
 ### First
 you must run the command to install the plugin and its dependences in you project
 ```bash
-npm install react-native-shadow --save
+yarn add react-native-shadow
 ``` 
 
 ### Second
 you have to config your project to support the SVG component we use( `react-native-svg` - [Link](https://github.com/react-native-community/react-native-svg)):
 
 ```bash
-npm install react-native-svg@X.X.X --save
+yarn add react-native-svg@X.X.X
 ``` 
-**You must get the correct version for your project! Or there will be some unknown exception**
+**You must get the correct verion for your project! Or there will be some unknown exception**
 
 
-#### run `react-native run-android` to install the lastest version on your phone
+Run `yarn run android` to install the lastest version on your phone
 
-## Third
+### Third
 
 After config the SVG component,you can simply use it in your project(*show ES6 only*):
 
