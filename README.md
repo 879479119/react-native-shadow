@@ -3,7 +3,7 @@
 ---
 ### Attention：
 
-**There are many users who are using different verion of `react` and `react-native`, so we have removed the dependency of `react-native-svg` in `package.json` since `1.1.3`, and you must add the correct version of `react-native-svg` as they suggested. :sorry:**
+**There are many users who are using different version of `react` and `react-native`, so we have removed the dependency of `react-native-svg` in `package.json` since `1.1.3`, and you must add the correct version of `react-native-svg` as they suggested. :sorry:**
 
 ---
 
@@ -28,7 +28,7 @@ you have to config your project to support the SVG component we use( `react-nati
 ```bash
 yarn add react-native-svg@X.X.X
 ``` 
-**You must get the correct verion for your project! Or there will be some unknown exception**
+**You must get the correct version for your project! Or there will be some unknown exception**
 
 
 Run `yarn run android` to install the lastest version on your phone
