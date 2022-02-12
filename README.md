@@ -1,4 +1,4 @@
-# react-native-shadow
+# react-native-shadow-fy
 
 ---
 
@@ -23,6 +23,10 @@
 在原仓库的`BoxShadow`组件使用过程中我发现，渐变的开始颜色和结束颜色都使用的是 color 属性，但这样在真机上阴影的外边界中是无法融入背景的，导致的结果是仿佛没有扩散开。
 
 所以我学习了 react-native-svg-2 里多了一个结束颜色的设定，增加了结束颜色的属性
+
+---
+
+## [这是一个 expo 示例](https://snack.expo.dev/@fuyun/react-native-shadow-fy)
 
 ---
 
