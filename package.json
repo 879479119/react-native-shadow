@@ -1,6 +1,6 @@
 {
   "name": "react-native-shadow-fy",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Added the end color to the react-native-svg library according to its own needs, the others are no different from the original warehouse",
   "main": "index.js",
   "scripts": {
